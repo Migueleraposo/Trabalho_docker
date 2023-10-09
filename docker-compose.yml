@@ -1,0 +1,19 @@
+version: '3'
+services:
+  image:
+    image: ubuntu:22.04
+    tty: true
+    environment:
+      - VAR1=abc
+      - VAR2=def
+
+  user1_container:
+    image: ubuntu:22.04
+    volumes:
+      - ./my_volume/user1:/home/user1
+
+  user2_container:
+    image: ubuntu:22.04
+    volumes:
+      - ./my_volume/user2:/home/user2
+
